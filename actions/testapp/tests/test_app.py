@@ -1,6 +1,6 @@
 """Module for test models"""
 import pytest
-from testapp.models import City, User
+from ..models import City, User
 
 
 @pytest.mark.django_db
