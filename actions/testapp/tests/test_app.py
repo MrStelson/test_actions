@@ -21,6 +21,7 @@ def test_create_user():
 
 
 def test_view(client):
+    """Test ping-pong router"""
     url = reverse('ping')
     response = client.get(url)
     assert response.status_code == 200
