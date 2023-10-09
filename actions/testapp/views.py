@@ -1,7 +1,7 @@
 """Module dor views"""
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def ping(request):
     """Test view: ping-pong"""
-    return HttpResponse('pong')
+    return render(request, 'testapp/index.html')
