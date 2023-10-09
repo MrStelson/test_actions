@@ -19,6 +19,5 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Test with pytest
-      run: |
-        cd actions
-        pytest
+      working-directory: ./actions
+      run: pytest
