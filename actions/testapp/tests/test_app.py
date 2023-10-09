@@ -1,5 +1,7 @@
 """Module for test models"""
 import pytest
+from django.urls import reverse
+
 from ..models import City, User
 
 
@@ -16,3 +18,9 @@ def test_create_user():
     city = City.objects.create(name="London")
     user = User.objects.create(first_name='Bob', last_name='Chan', city=city)
     assert user.city == city
+
+
+def test_view(client):
+    url = reverse('ping')
+    response = client.get(url)
+    assert response.status_code == 200
