@@ -1,3 +1,7 @@
-from django.shortcuts import render
+"""Module dor views"""
+from django.http import HttpResponse
 
-# Create your views here.
+
+def ping(request):
+    """Test view: ping-pong"""
+    return HttpResponse('pong')
